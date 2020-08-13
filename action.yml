@@ -7,7 +7,7 @@ inputs:
         default: 'main.pdf'
 runs:
     using: 'docker'
-    image: 'Dockerfile'
+    image: 'aliaume/texbuilder:latest'
     args:
         - ${{ inputs.build-target }}
 
