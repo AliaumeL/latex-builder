@@ -1,0 +1,14 @@
+name: 'Latex Builder'
+description: 'Build a makefile project using a dockerized latex'
+inputs:
+    build-target:
+        description: 'The target to build using make'
+        required: true
+        default: 'main.pdf'
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - ${{ inputs.build-target }}
+
+
